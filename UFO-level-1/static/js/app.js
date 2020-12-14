@@ -14,16 +14,19 @@ data.forEach(function (tableData) {
 });
 
 
-var date_entry = d3.select("#datetime");
+var button = d3.select("#filter-btn");
 
-date_entry.on("change", function () {
-    var date = d3.event.target.value;
+button.on("click", function () {
+    console.log(`clicked`);
+    var date = document.getElementById('datetime').value;
     console.log(date);
-    var filterDates = tableData.filter(sighting => sighting.datetime === date);
+
+    var filterDates = tableData.filter(item => item.datetime === date);
+    console.log(filterDates);
+
     var tbody = d3.select("tbody");
     tbody.html("");
     filterDates.forEach(function (filterDates) {
-        console.log(filterDates);
         var row1 = tbody.append("tr");
         Object.entries(filterDates).forEach(function ([key, value]) {
             console.log(key, value);
@@ -31,5 +34,4 @@ date_entry.on("change", function () {
             cell1.text(value);
         });
     });
-    date_entry.reset();
 })
