@@ -1,6 +1,6 @@
 # javascript-challenge
-UNC Data Analytics Bootcamp
-By Ai-Jiuan Wu
+
+Javascript HW 14 - UNC Data Analytics Bootcamp (Ai-Jiuan Wu )
 
 Two folders are in this repository. They include 'UFO-level-1' and 'UFO-level-2'.
 
